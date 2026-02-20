@@ -366,6 +366,25 @@ body {
   font-size: 12px;
 }
 
+.saramin-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-family: "BookkMyungjo", -apple-system, BlinkMacSystemFont,
+    "Malgun Gothic", "맑은 고딕", serif;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 10px;
+}
+
+.saramin-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(238, 90, 36, 0.4);
+}
+
 .flip-btn {
   background: linear-gradient(135deg, #4a6fa5 0%, #6b94c0 100%);
   color: white;
@@ -594,6 +613,419 @@ body {
   transform: translateY(0);
 }
 
+/* 새 Profile 2단 레이아웃 */
+.profile-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.profile-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 16px 0 24px;
+}
+
+.profile-tags span {
+  background: var(--light-blue);
+  color: var(--primary-blue);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.resume-btn {
+  background: linear-gradient(135deg, #4a6fa5 0%, #6b94c0 100%);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-family: "BookkMyungjo", -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", serif;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+.resume-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(74, 111, 165, 0.4);
+}
+
+.profile-right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about-section h4,
+.skills-section h4 {
+  font-size: 22px;
+  color: #2d3748;
+  font-family: "BookkMyungjo", -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", serif;
+  font-weight: 600;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  color: #4a5568;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* 원형 게이지 */
+.skill-gauges {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.skill-gauge-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.gauge-wrap {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+}
+
+.gauge-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.gauge-bg {
+  fill: none;
+  stroke: #f0f0f0;
+  stroke-width: 12;
+}
+
+.gauge-fill {
+  fill: none;
+  stroke-width: 12;
+  stroke-linecap: round;
+  stroke-dasharray: 314;
+  stroke-dashoffset: 314;
+  transition: stroke-dashoffset 1.5s ease-out;
+}
+
+.gauge-dev    { stroke: #ffb3b3; }
+.gauge-design { stroke: #c5cc99; }
+.gauge-pub    { stroke: #c9afd4; }
+
+.gauge-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gauge-percent {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.gauge-name {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
+/* 점선 박스 */
+.skill-boxes {
+  display: none;
+}
+
+.skill-box {
+  flex: 1;
+  border-radius: 16px;
+  padding: 16px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.skill-box-dev    { border: 2px dashed #ffb3b3; }
+.skill-box-design { border: 2px dashed #c5cc99; }
+.skill-box-pub    { border: 2px dashed #c9afd4; }
+
+/* 게이지 아이템 내 인라인 박스 */
+.skill-gauge-item .skill-box {
+  flex: 1;
+  min-height: 90px;
+}
+
+.skill-item-new {
+  margin-bottom: 20px;
+}
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #2d3748;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.skill-dev-bar {
+  background: linear-gradient(90deg, #ff9999 0%, #ffb3b3 100%);
+}
+.skill-design-bar {
+  background: linear-gradient(90deg, #ccdd99 0%, #d9e6a8 100%);
+}
+.skill-pub-bar {
+  background: linear-gradient(90deg, #cc99cc 0%, #d9b3d9 100%);
+}
+
+.skill-icons-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+/* 이력서 모달 */
+.resume-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.resume-modal.active {
+  display: flex;
+}
+
+.resume-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  background: white;
+  border-radius: 16px;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+  position: sticky;
+  top: 12px;
+  left: calc(100% - 50px);
+  float: right;
+  margin: 12px 12px 0 0;
+  z-index: 10;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: block;
+}
+
+.modal-close:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+/* 모달 상단 헤더 */
+.modal-header {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 40px 40px 30px;
+  border-bottom: 2px solid #e2e8f0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  clear: both;
+  font-family: "BookkGothic", -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", sans-serif;
+}
+
+.modal-photo {
+  width: 180px;
+  height: 220px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.modal-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.modal-basic-info {
+  flex: 1;
+  padding-top: 10px;
+}
+
+.modal-job-title {
+  font-size: 14px;
+  color: #4a6fa5;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.modal-name {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2d3748;
+  font-family: "BookkMyungjo", serif;
+  margin-bottom: 12px;
+  letter-spacing: 4px;
+}
+
+.modal-intro {
+  font-size: 15px;
+  color: #4a5568;
+  margin-bottom: 20px;
+  padding: 10px 14px;
+  border-left: 3px solid #4a6fa5;
+  background: rgba(74,111,165,0.05);
+  border-radius: 0 8px 8px 0;
+  line-height: 1.6;
+}
+
+.modal-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modal-contacts p {
+  font-size: 15px;
+  color: #4a5568;
+}
+
+.modal-contacts a {
+  color: #4a6fa5;
+  text-decoration: none;
+}
+
+.modal-contacts a:hover {
+  text-decoration: underline;
+}
+
+/* 모달 본문 */
+.modal-body {
+  padding: 30px 40px 40px;
+  font-family: "BookkGothic", -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", sans-serif;
+}
+
+.modal-section {
+  margin-bottom: 32px;
+}
+
+.modal-section h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2d3748;
+  font-family: "BookkMyungjo", serif;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e2e8f0;
+  margin-bottom: 16px;
+}
+
+.modal-item {
+  display: flex;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.modal-item:last-child {
+  border-bottom: none;
+}
+
+.modal-period {
+  font-size: 13px;
+  color: #9ca3af;
+  min-width: 110px;
+  line-height: 1.6;
+  flex-shrink: 0;
+}
+
+.modal-item strong {
+  font-size: 16px;
+  color: #2d3748;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.modal-item p {
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.7;
+  margin-top: 4px;
+}
+
+.modal-intro-text {
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.9;
+  font-family: "BookkGothic", -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", sans-serif;
+}
+
+.modal-intro-block {
+  margin-bottom: 24px;
+}
+
+.modal-intro-block h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 8px;
+  font-family: "BookkGothic", -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", sans-serif;
+}
+
+.modal-intro-block p {
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.9;
+  font-family: "BookkGothic", -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", sans-serif;
+}
+
 /* Skills 섹션 */
 #skills {
   background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
@@ -746,6 +1178,154 @@ body {
 
 /* Intro 섹션 제거됨 */
 
+.project-card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: white;
+  padding: 20px 16px 14px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "BookkMyungjo", serif;
+}
+
+/* 프로젝트 모달 */
+.project-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.project-modal.active {
+  display: flex;
+}
+
+.project-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  max-height: 90vh;
+  background: white;
+  border-radius: 16px;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.project-modal-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.project-modal-body {
+  padding: 28px 32px 36px;
+}
+
+.project-modal-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #2d3748;
+  font-family: "BookkMyungjo", serif;
+  margin-bottom: 8px;
+}
+
+.project-modal-sub {
+  font-size: 15px;
+  color: #4a6fa5;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.project-modal-desc {
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-family: "BookkGothic", sans-serif;
+}
+
+.project-modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.project-modal-tags span {
+  background: var(--light-blue);
+  color: var(--primary-blue);
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.project-modal-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #4a6fa5 0%, #6b94c0 100%);
+  color: white;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-family: "BookkMyungjo", serif;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-modal-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(74,111,165,0.4);
+}
+
+.project-modal-section {
+  margin-bottom: 20px;
+}
+
+.project-modal-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #4a6fa5;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-family: "BookkMyungjo", serif;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.project-modal-stack {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-modal-stack li {
+  font-size: 14px;
+  color: #4a5568;
+  line-height: 1.6;
+  font-family: "BookkGothic", sans-serif;
+  padding-left: 16px;
+  position: relative;
+}
+
+.project-modal-stack li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #4a6fa5;
+}
+
 /* Project 섹션 */
 #project {
   background: #ffffff;
@@ -846,11 +1426,21 @@ body {
   line-height: 1.6;
 }
 
+.project-description {
+  color: #cbd5e0;
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
 .project-tags {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 15px;
 }
 
 .project-tags span {

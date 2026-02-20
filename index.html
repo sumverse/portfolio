@@ -15,9 +15,6 @@
       <button class="nav-btn" data-target="profile">
         <span>Profile</span>
       </button>
-      <button class="nav-btn" data-target="skills">
-        <span>Skills</span>
-      </button>
       <button class="nav-btn" data-target="project">
         <span>Project</span>
       </button>
@@ -45,223 +42,226 @@
     <section id="profile" class="section">
       <div class="container">
         <h2 class="section-title">Profile</h2>
-        <div class="flip-card-container">
-          <div class="flip-card" id="profileCard">
-            <!-- 앞면 -->
-            <div class="flip-card-front">
-              <div class="profile-image">
-                <img src="IMG_8301.JPG" alt="프로필 사진" />
-              </div>
-              <h3 class="profile-name">이 이 섬</h3>
-              <p class="profile-birth">1996.09.11</p>
-
-              <div class="flip-card-content">
-                <div class="card-section">
-                  <h4>Education</h4>
-                  <p>계명대학교 교육대학원 졸</p>
-                  <p>인제대학교 음악학과 졸</p>
-                  <p>경북예술고등학교 졸</p>
-                </div>
-
-                <div class="card-section">
-                  <h4>Work Experience</h4>
-                  <p>
-                    <strong>계명대학교 전산원 조교</strong><br />
-                    <span class="period">2021.03 - 2023.08</span>
-                  </p>
-                  <p>
-                    <strong>두잇학원</strong><br />
-                    <span class="period">2023.09 - 2024.12</span>
-                  </p>
-                </div>
-              </div>
-
-              <button class="flip-btn">자기소개 보기 →</button>
+        <div class="profile-layout">
+          <!-- 왼쪽: About Me + 이력서 버튼 -->
+          <div class="profile-left">
+            <div class="about-section">
+              <h4>About Me</h4>
+              <p>
+                저는 교육 현장에서 배운 '상대방에 대한 깊은 이해'를 바탕으로, 업무의 막힌 부분을 찾아내고 이를 효율적으로 정리하는 데 익숙합니다. 2년 반 동안 대학원 전산원 조교로 근무하며 반복되는 업무를 누구나 이해하기 쉬운 매뉴얼로 정리했고, 학원 현장에서는 학생들의 수준을 면밀히 진단하여 실제 학습이 원활하게 흘러가도록 수업 흐름을 조정했습니다. 단순히 주어진 일을 처리하는 것에 그치지 않고, 함께 일하는 동료들이 더 안정적으로 업무에 몰입할 수 있도록 돕는 과정에서 큰 보람을 느낍니다.<br /><br />
+                보유한 디지털 활용 능력과 디자인 협업 역량은 이러한 '업무의 시각화와 효율화'를 돕는 강력한 도구입니다. 예상치 못한 상황에서도 빠르게 중심을 잡는 회복탄력성과 업무의 우선순위를 명확히 하는 책임감을 바탕으로, 어떤 환경에서도 빠르게 적응하여 제 몫을 다하겠습니다.
+              </p>
             </div>
+            <button class="resume-btn" id="resumeBtn">이력서 보기</button>
+          </div>
 
-            <!-- 뒷면 -->
-            <div class="flip-card-back">
-              <h3>About Me</h3>
-              <div class="about-content">
-                <p>
-                  안녕하세요, 웹 개발자 이이섬입니다.<br /><br />
+          <!-- 오른쪽: Skills -->
+          <div class="profile-right">
+            <div class="skills-section">
+              <h4>Skills</h4>
 
-                  교육 현장에서의 경험을 바탕으로 사용자 친화적인 웹사이트를
-                  만들고 있습니다. 계명대학교 전산원 조교로 근무하며 실습 관리와
-                  교육을 담당했고, 학원에서 학생들을 가르치며 소통의 중요성을
-                  배웠습니다.<br /><br />
-
-                  HTML, CSS, JavaScript를 활용한 프론트엔드 개발부터 PHP와
-                  MySQL을 이용한 백엔드 개발까지 다양한 프로젝트를
-                  진행해왔습니다. 디자인 툴을 활용한 UI/UX 작업도 가능합니다.<br /><br />
-
-                  배움을 멈추지 않고, 더 나은 사용자 경험을 만들기 위해 노력하는
-                  개발자가 되겠습니다.
-                </p>
+              <!-- 원형 게이지 + 점선 박스 한 줄씩 -->
+              <div class="skill-gauges">
+                <div class="skill-gauge-item">
+                  <div class="gauge-wrap">
+                    <svg viewBox="0 0 120 120" class="gauge-svg">
+                      <circle class="gauge-bg" cx="60" cy="60" r="50"/>
+                      <circle class="gauge-fill gauge-dev" cx="60" cy="60" r="50" data-progress="85"/>
+                    </svg>
+                    <div class="gauge-label">
+                      <span class="gauge-percent">85%</span>
+                      <span class="gauge-name">Dev</span>
+                    </div>
+                  </div>
+                  <div class="skill-box skill-box-dev">
+                    <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"/><span>Java</span></div>
+                    <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"/><span>React</span></div>
+                    <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js"/><span>Next.js</span></div>
+                    <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"/><span>PHP</span></div>
+                    <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"/><span>MySQL</span></div>
+                    <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"/><span>Git</span></div>
+                  </div>
+                </div>
+                <div class="skill-gauge-item">
+                  <div class="gauge-wrap">
+                    <svg viewBox="0 0 120 120" class="gauge-svg">
+                      <circle class="gauge-bg" cx="60" cy="60" r="50"/>
+                      <circle class="gauge-fill gauge-design" cx="60" cy="60" r="50" data-progress="70"/>
+                    </svg>
+                    <div class="gauge-label">
+                      <span class="gauge-percent">70%</span>
+                      <span class="gauge-name">Design</span>
+                    </div>
+                  </div>
+                  <div class="skill-box skill-box-design">
+                    <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop"/><span>Photoshop</span></div>
+                    <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" alt="Illustrator"/><span>Illustrator</span></div>
+                    <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"/><span>Figma</span></div>
+                  </div>
+                </div>
+                <div class="skill-gauge-item">
+                  <div class="gauge-wrap">
+                    <svg viewBox="0 0 120 120" class="gauge-svg">
+                      <circle class="gauge-bg" cx="60" cy="60" r="50"/>
+                      <circle class="gauge-fill gauge-pub" cx="60" cy="60" r="50" data-progress="70"/>
+                    </svg>
+                    <div class="gauge-label">
+                      <span class="gauge-percent">70%</span>
+                      <span class="gauge-name">Publisher</span>
+                    </div>
+                  </div>
+                  <div class="skill-box skill-box-pub">
+                    <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/><span>HTML</span></div>
+                    <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/><span>CSS</span></div>
+                    <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/><span>JS</span></div>
+                  </div>
+                </div>
               </div>
-              <button class="flip-btn">뒤로 가기 ←</button>
+
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills 섹션 -->
-    <section id="skills" class="section">
-      <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-content">
-          <!-- Dev 스킬 -->
-          <div class="skill-category skill-dev">
-            <div class="skill-header">
-              <h3>Dev</h3>
-              <span class="skill-percent">85%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="85"></div>
-            </div>
-            <div class="skill-icons">
-              <div class="skill-icon-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                  alt="Java"
-                />
-                <span>Java</span>
-              </div>
-              <div class="skill-icon-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                  alt="React"
-                />
-                <span>React</span>
-              </div>
-              <div class="skill-icon-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                  alt="Git"
-                />
-                <span>Git</span>
-              </div>
-              <div class="skill-icon-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                  alt="GitHub"
-                />
-                <span>GitHub</span>
-              </div>
-            </div>
-          </div>
+    <!-- 이력서 모달 -->
+    <div class="resume-modal" id="resumeModal">
+      <div class="resume-modal-content">
+        <button class="modal-close" id="modalClose">✕</button>
 
-          <!-- Design 스킬 -->
-          <div class="skill-category skill-design">
-            <div class="skill-header">
-              <h3>Design</h3>
-              <span class="skill-percent">70%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="70"></div>
-            </div>
-            <div class="skill-icons">
-              <div class="skill-icon-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
-                  alt="Photoshop"
-                />
-                <span>Photoshop</span>
-              </div>
-              <div class="skill-icon-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg"
-                  alt="Illustrator"
-                />
-                <span>Illustrator</span>
-              </div>
-              <div class="skill-icon-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-                  alt="Figma"
-                />
-                <span>Figma</span>
-              </div>
-            </div>
+        <!-- 모달 상단: 사진 + 기본정보 -->
+        <div class="modal-header">
+          <div class="modal-photo">
+            <img src="IMG_8301.JPG" alt="프로필 사진" />
           </div>
-
-          <!-- Publisher 스킬 -->
-          <div class="skill-category skill-publisher">
-            <div class="skill-header">
-              <h3>Publisher</h3>
-              <span class="skill-percent">70%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="70"></div>
-            </div>
-            <div class="skill-icons">
-              <div class="skill-icon-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                  alt="HTML"
-                />
-                <span>HTML</span>
-              </div>
-              <div class="skill-icon-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                  alt="CSS"
-                />
-                <span>CSS</span>
-              </div>
-              <div class="skill-icon-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                  alt="JavaScript"
-                />
-                <span>JavaScript</span>
-              </div>
+          <div class="modal-basic-info">
+            <p class="modal-job-title">WEB DEVELOPER</p>
+            <h2 class="modal-name">이 이 섬</h2>
+            <p class="modal-intro">교육 경험을 바탕으로 콘텐츠와 학습 환경을 지원하는 인재</p>
+            <div class="modal-contacts">
+              <p><a href="mailto:isumusic1ove@gmail.com">isumusic1ove@gmail.com</a></p>
+              <p>010-2547-1299</p>
+              <p>대구 동구 혁신대로</p>
+              <p><a href="https://github.com/sumverse" target="_blank">github.com/sumverse</a></p>
             </div>
           </div>
         </div>
+
+        <!-- 모달 본문 -->
+        <div class="modal-body">
+
+          <!-- 학력 -->
+          <div class="modal-section">
+            <h3>학력</h3>
+            <div class="modal-item">
+              <span class="modal-period">2015.03 ~ 2020.02</span>
+              <div>
+                <strong>인제대학교(4년제)</strong> 관현악 플루트 · 졸업
+              </div>
+            </div>
+            <div class="modal-item">
+              <span class="modal-period">~ 2023</span>
+              <div>
+                <strong>계명대학교 교육대학원(석사)</strong> 음악교육 · 졸업
+              </div>
+            </div>
+          </div>
+
+          <!-- 경력 -->
+          <div class="modal-section">
+            <h3>경력</h3>
+            <div class="modal-item">
+              <span class="modal-period">2023.09 ~ 2024.12<br/>1년 4개월</span>
+              <div>
+                <strong>아소비 학원</strong> · 학원강사<br/>
+                <p>초등 저학년 국어·수학·한자 학습 지도 및 수업 보조, 학생 학습 태도 관리 및 기초 학습 지원</p>
+              </div>
+            </div>
+            <div class="modal-item">
+              <span class="modal-period">2021.03 ~ 2023.08<br/>2년 6개월</span>
+              <div>
+                <strong>계명대학교 전산교육원</strong> · 조교<br/>
+                <p>교내 PC 실습실 관리, 조교 업무 매뉴얼 제작, 방학 기간 조교 교육 운영</p>
+              </div>
+            </div>
+            <div class="modal-item">
+              <span class="modal-period">2020.02 ~ 2021.02<br/>1년 1개월</span>
+              <div>
+                <strong>배스킨라빈스</strong> · 매니저<br/>
+                <p>매장 운영 전반 보조, 아르바이트생 관리, 재고·위생 관리</p>
+              </div>
+            </div>
+            <div class="modal-item">
+              <span class="modal-period">2015.01 ~ 2020.12<br/>6년</span>
+              <div>
+                <strong>개인 악기 레슨</strong> · 음악<br/>
+                <p>초·중·고 및 성인 대상 플루트 개인 레슨 장기간 운영</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 자격 -->
+          <div class="modal-section">
+            <h3>자격</h3>
+            <div class="modal-item">
+              <span class="modal-period">2023.03</span>
+              <div>
+                <strong>중등학교 2급 정교사(음악)</strong> · 교육인적자원부
+              </div>
+            </div>
+          </div>
+
+          <!-- 자기소개 -->
+          <div class="modal-section">
+            <h3>자기소개서</h3>
+            <div class="modal-intro-block">
+              <p>"좋은 결과는 대상을 이해하는 데서 출발한다"는 생각으로 교육 현장을 경험해왔습니다. 학생들의 수준을 분석하고 그에 맞게 수업과 자료를 구성해오며, 이해를 바탕으로 준비하는 태도를 길러왔습니다. 이러한 경험을 바탕으로, 직접 가르치는 역할을 넘어 교육을 지원하고 설계하는 영역에서도 역량을 발휘하고자 합니다.</p>
+            </div>
+            <div class="modal-intro-block">
+              <p>어릴 때부터 저는 무언가를 배우는 것만큼이나, 그것을 다른 사람과 나누는 과정에서 더 큰 보람을 느껴왔습니다. 초등학교 시절 음악 시간에 배운 수어 합창과 리코더 합주를 집에서 연습한 뒤, 어려워하는 친구들에게 방법을 설명해주곤 했습니다. 친구들이 점점 자신감을 얻고 함께 연주를 완성해가는 모습을 보며 단순한 개인의 성취를 넘어 '이해를 돕는 역할'에 깊은 의미를 느끼게 되었습니다.<br/><br/>이후 관악합주반에서 3년간 플루트를 연주하며 주장으로 활동했습니다. 이 과정에서 연주 실력과 효과적인 지도 방법은 별개임을 깨달았고, 실력에 관계없이 모두가 이해할 수 있도록 소통하는 데 집중했습니다. 그 결과 연주의 완성도뿐 아니라 팀원들의 참여도와 몰입도 또한 높아졌고, 저는 '잘하는 것'보다 '이해시키는 과정'이 더 중요하다는 사실을 배우게 되었습니다. 이러한 경험은 학부 시절의 지도 경험으로 이어졌습니다.</p>
+            </div>
+            <div class="modal-intro-block">
+              <p>학부 시절, 플루트 레슨을 지속적으로 하였습니다. 레슨을 하며 가장 중요하게 생각한 것은 학생과의 끊임없는 소통이었습니다. 기술적인 부분뿐 아니라 학생의 감정에도 집중하여 이야기를 나누며 학생에게 맞는 연습 방법을 찾기 위해 노력했습니다. 학생들이 "이제 더 잘할 수 있을 것 같다."라고 말하던 순간이 기억납니다. 단지 기술적인 성장뿐 아니라 그동안의 노력과 소통이 학생에게 실제적인 자신감을 심어주었다는 것을 의미했습니다. 이 경험을 통해 학습의 성장은 일방적인 전달이 아니라, 충분한 이해와 신뢰 속에서 이루어진다는 점을 체감했습니다.</p>
+            </div>
+            <div class="modal-intro-block">
+              <p>이후 대학원 시절에는 2년 반 동안 교내 전산원에서 근무하며 조교 교육과 교내 PC실 관리 업무를 맡았습니다. 저는 근무 시간보다 항상 여유롭게 출근하여 조교들이 업무에 어려움을 겪지 않도록 매뉴얼을 만들고, 방학마다 조교 교육을 위한 자료를 준비하여 교육했습니다. 이 경험을 통해 컴퓨터와 디지털 매체에 대한 능숙함을 키웠고, 같은 내용이라도 매년 자료를 점검하고 재구성하며 더 이해하기 쉽고 효율적인 형태로 개선해 나갔습니다. 이 과정에서 디지털 매체 활용 능력을 키웠을 뿐 아니라, 학습 자료를 체계적으로 설계하는 경험을 쌓을 수 있었습니다.</p>
+            </div>
+            <div class="modal-intro-block">
+              <p>졸업 후에는 담임제 보습학원에서 근무하며 수업 외에도 학부모 상담, 사전 수준 진단 업무를 맡았습니다. 학부모와 적극적으로 소통하며 학생의 현재 학습 상태와 목표를 구체적으로 파악했고, 학생 개개인의 과목별 수준을 면밀히 진단했습니다. 이를 바탕으로 개별 맞춤형 수업 계획을 수립하고 학습 내용을 재구성하여 실제적인 학습 향상을 이끌어냈습니다. 이 경험을 통해 교육은 단순한 지식 전달이 아니라, 학습자의 상태를 분석하고 그에 맞게 구조를 설계하는 과정이라는 점을 확실히 깨닫게 되었습니다.</p>
+            </div>
+            <div class="modal-intro-block">
+              <p>이러한 경험은 자연스럽게 저의 성격으로 이어졌습니다. 저의 장점은 어떤 상황에서도 빠르게 중심을 되찾고 맡은 일을 끝까지 수행하는 회복력과 책임감입니다. 예상치 못한 어려움이 있더라도 감정에 오래 머무르기보다 해야 할 일에 집중하며 실행으로 옮깁니다. 새로운 환경에서도 빠르게 적응하고 부족한 부분은 스스로 보완해왔습니다. 다만, 꼼꼼함으로 인해 속도가 더딜 때가 있었지만 현재는 우선순위를 명확히 설정하며 효율적으로 업무를 수행하고자 노력하고 있습니다. 이러한 태도는 업무를 체계적으로 정리하고 구조화하는 과정에서도 강점으로 작용하고 있습니다.</p>
+            </div>
+            <div class="modal-intro-block">
+              <p>앞으로도 학습자의 수준과 환경을 면밀히 분석하고, 그에 맞는 교육 구조를 체계적으로 설계하는 역할을 수행하고자 합니다. 현장에서 쌓아온 경험을 바탕으로 업무를 정리하고 체계화하여 구성원들이 보다 안정적으로 업무를 수행할 수 있도록 지원하겠습니다. 나아가 함께 일하는 구성원들과 신뢰를 바탕으로 협력하며, 교육 운영이 안정적이고 효율적으로 이루어질 수 있도록 기여하고 싶습니다.</p>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </section>
+    </div>
 
     <!-- Project 섹션 -->
     <section id="project" class="section">
       <div class="container">
         <h2 class="section-title">Project</h2>
         <div class="project-grid">
-          <a
-            href="https://sumverse.github.io/angelinus/"
-            target="_blank"
-            class="project-card"
-          >
+          <div class="project-card" data-project="harmonyclass">
+            <img src="harmonyclass.png" alt="Harmonyclass 프로젝트" />
+            <div class="project-card-title">Harmonyclass</div>
+          </div>
+          <div class="project-card" data-project="orchenova">
+            <img src="orchenova.png" alt="Orchenova 프로젝트" />
+            <div class="project-card-title">OrcheNova</div>
+          </div>
+          <div class="project-card" data-project="angelinus">
             <img src="angelinus.png" alt="Angelinus 프로젝트" />
-            <div class="project-overlay">
-              <h3>Angelinus 웹페이지 리뉴얼</h3>
-              <p>카페 브랜드 웹사이트 리뉴얼 프로젝트</p>
-              <div class="project-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="https://sumverse.dothome.co.kr/corgiisland/index.php"
-            target="_blank"
-            class="project-card"
-          >
+            <div class="project-card-title">Angelinus 리뉴얼</div>
+          </div>
+          <div class="project-card" data-project="corgiisland">
             <img src="corgiisland.png" alt="코기섬 프로젝트" />
-            <div class="project-overlay">
-              <h3>코기섬</h3>
-              <p>웰시코기 커뮤니티 사이트 (로그인/회원가입)</p>
-              <div class="project-tags">
-                <span>PHP</span>
-                <span>MySQL</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-            </div>
-          </a>
+            <div class="project-card-title">코기섬</div>
+          </div>
         </div>
       </div>
     </section>
@@ -271,10 +271,9 @@
       <div class="container">
         <h2 class="section-title">Team Project</h2>
         <div class="project-grid">
-          <div class="project-card project-placeholder">
-            <div class="placeholder-content">
-              <span>프로젝트 준비중</span>
-            </div>
+          <div class="project-card" data-project="touslesjours">
+            <img src="touslesjours.png" alt="뚜레쥬르 프로젝트" />
+            <div class="project-card-title">TOUS les JOURS</div>
           </div>
           <div class="project-card project-placeholder">
             <div class="placeholder-content">
@@ -284,6 +283,27 @@
         </div>
       </div>
     </section>
+
+    <!-- 프로젝트 모달 -->
+    <div class="project-modal" id="projectModal">
+      <div class="project-modal-content">
+        <button class="modal-close" id="projectModalClose">✕</button>
+        <img class="project-modal-img" id="projectModalImg" src="" alt="" />
+        <div class="project-modal-body">
+          <h2 class="project-modal-title" id="projectModalTitle"></h2>
+          <p class="project-modal-sub" id="projectModalSub"></p>
+          <div class="project-modal-section">
+            <h4 class="project-modal-section-title">주제</h4>
+            <p class="project-modal-desc" id="projectModalDesc"></p>
+          </div>
+          <div class="project-modal-section">
+            <h4 class="project-modal-section-title">기술스택</h4>
+            <ul class="project-modal-stack" id="projectModalStack"></ul>
+          </div>
+          <a class="project-modal-link" id="projectModalLink" href="" target="_blank">사이트 바로가기</a>
+        </div>
+      </div>
+    </div>
 
     <!-- Contact 섹션 -->
     <section id="contact" class="section">
@@ -300,7 +320,7 @@
             <div class="contact-item">
               <div>
                 <h4>Email</h4>
-                <p>isumusic1ove@gmail.com</p>
+                <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="69001a1c041c1a000a58061f0c290e04080005470a0604">[email&#160;protected]</a></p>
               </div>
             </div>
             <div class="contact-item">
